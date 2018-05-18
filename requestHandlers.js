@@ -2,6 +2,14 @@
 var querystring = require("querystring");
 var fs = require("fs");
 
+var dgram = require('dgram');
+var clientSocket = dgram.createSocket('udp4');
+//var udpsendandrecv = require("./sendandRecv");
+//var targetPort = 0;
+//var targetIp = '0.0.0.0';
+var device_udp_info=[];
+var uid = 0;
+
 function getText(response) {
     var text = "Winnie the Witch";
     console.log(text);
